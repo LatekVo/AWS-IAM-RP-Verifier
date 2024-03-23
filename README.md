@@ -1,18 +1,22 @@
 # AWS-IAM-RP-Interaction
 
 ### Description
-// TODO
+This library loads, tests and verifies **AWS::IAM::Role Policy** json files.
+
+---
 
 ### Execution
-// TODO - step-by-step building and running
+Launch `go run` in project's root
+
+### Testing
+Launch `go test` in project's root
+
+---
 
 ### Task Reference
 **AWS::IAM::Role Policy:** [Amazon AWS IAM Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-role-policy.html)
 
 **Task description** [Google documents](https://docs.google.com/document/d/1zimLpe2F_0an4rAptqiIlCIky8NnUjt7/edit)
-
-### Example
-// TODO
 
 ### Key notes
 
