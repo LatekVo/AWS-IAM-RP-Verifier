@@ -1,9 +1,8 @@
 package rp_resource_verifier_test
 
 import (
-	"fmt"
+	"testing"
 )
 
-func RpResourceVerifierTest(json string) {
-	fmt.Println("Tried loading json file.")
+func TestRpResourceVerifier(t *testing.T) {
 }

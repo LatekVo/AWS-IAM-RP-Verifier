@@ -2,14 +2,18 @@ package rp_resource_verifier
 
 import (
 	"aws/iam/rp_core"
-	"fmt"
 )
 
 func RpResourceVerifier(TestedRolePolicy rp_core.RolePolicy, expected string) bool {
-	fmt.Println("Tried loading json file.")
 
-	// todo: iterate through every statement
-	var resourceField = TestedRolePolicy.PolicyDocument.Statement[0].Resource
+	var statements = TestedRolePolicy.PolicyDocument.Statement
+
+	// expecting exactly one statement
+	if len(statements) != 1 {
+		return false
+	}
+
+	var resourceField = statements[0].Resource
 
 	return resourceField == expected
 }

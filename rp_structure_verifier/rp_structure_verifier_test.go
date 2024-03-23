@@ -1,9 +1,8 @@
 package rp_structure_verifier_test
 
 import (
-	"fmt"
+	"testing"
 )
 
-func RpStructureVerifierTest(json string) {
-	fmt.Println("Tried loading json file.")
+func TestRpStructureVerifier(t *testing.T) {
 }
