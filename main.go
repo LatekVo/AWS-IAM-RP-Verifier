@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	rp_raw := utilities.LoadFile("tests/data/valid_payload_clean.json")
-	rp_json := rp_json_loader.RpJsonLoader(rp_raw)
+	rp_raw, _ := utilities.LoadFile("tests/data/valid_payload_clean.json")
+	rp_json, _ := rp_json_loader.RpJsonLoader(rp_raw)
 	result := rp_resource_verifier.RpResourceVerifier(rp_json, "*")
 
 	fmt.Println("Results:", result)

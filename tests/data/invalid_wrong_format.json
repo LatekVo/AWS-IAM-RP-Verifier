@@ -1,0 +1,9 @@
+{
+    "PolicyDocument": {
+        "Statement": [
+            {
+                "Resource": "*"
+            }
+        ]
+    }
+}

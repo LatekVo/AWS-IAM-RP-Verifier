@@ -4,9 +4,9 @@ import (
 	"aws/iam/rp_core"
 )
 
-func RpResourceVerifier(TestedRolePolicy rp_core.RolePolicy, expected string) bool {
+func RpResourceVerifier(testedRolePolicy rp_core.RolePolicy, expected string) bool {
 
-	var statements = TestedRolePolicy.PolicyDocument.Statement
+	statements := testedRolePolicy.PolicyDocument.Statement
 
 	// expecting exactly one statement
 	if len(statements) != 1 {
