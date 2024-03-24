@@ -44,7 +44,6 @@ func (p *RolePolicy) UnmarshalJSON(data []byte) error {
 		if value == nil {
 			return fmt.Errorf("missing required field: %v", field)
 		}
-
 	}
 
 	// since type casting from map[string]interface{} struct-members to RP's struct-members is not possible in Go,
