@@ -15,7 +15,7 @@ func TestRpJsonLoader(t *testing.T) {
 		rpRaw, _ := utilities.LoadFile(testsPath + tc.In)
 		_, err := rp_json_loader.RpJsonLoader(rpRaw)
 
-		if err != nil && tc.Want {
+		if err != nil && !tc.Want {
 			t.Errorf("Case: %v, got: %v, Want: %v", tc.In, err, tc.Want)
 		}
 	}

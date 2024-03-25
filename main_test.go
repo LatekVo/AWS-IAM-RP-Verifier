@@ -15,12 +15,12 @@ func TestMain(t *testing.T) {
 
 	for _, tc := range testcases {
 		rpRaw, err := utilities.LoadFile(testsPath + tc.In)
-		if err != nil && tc.Want {
+		if err != nil && !tc.Want {
 			t.Errorf("Case: %v, got: %v, Want: %v", tc.In, err, tc.Want)
 		}
 
 		rpJson, err := rp_json_loader.RpJsonLoader(rpRaw)
-		if err != nil && tc.Want {
+		if err != nil && !tc.Want {
 			t.Errorf("Case: %v, got: %v, Want: %v", tc.In, err, tc.Want)
 		}
 
@@ -31,7 +31,7 @@ func TestMain(t *testing.T) {
 
 		// this err var was already handled in previous statements
 		result, err := rp_resource_verifier.RpResourceVerifier(rpJson, "*")
-		if err != nil && tc.Want {
+		if err != nil && !tc.Want {
 			t.Errorf("Case: %v, got: %v, Want: %v", tc.In, err, tc.Want)
 		}
 

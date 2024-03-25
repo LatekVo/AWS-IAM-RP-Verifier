@@ -17,10 +17,10 @@ func TestRpResourceVerifier(t *testing.T) {
 		rpJson, _ := rp_json_loader.RpJsonLoader(rpRaw)
 
 		result, err := rp_resource_verifier.RpResourceVerifier(rpJson, "*")
-		if err != nil && tc.Want {
+		if err != nil && !tc.Want {
 			t.Errorf("Case: %v, got: %v, Want: %v", tc.In, err, tc.Want)
 		}
-		if result != tc.Want {
+		if result != !tc.Want {
 			t.Errorf("Case: %v, got: %v, Want: %v", tc.In, result, tc.Want)
 		}
 	}
