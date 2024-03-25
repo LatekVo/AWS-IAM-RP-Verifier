@@ -9,7 +9,9 @@ This library loads, tests and verifies **AWS::IAM::Role Policy** json files.
 Launch `go run` in project's root
 
 ### Testing
-Launch `go test` in project's root
+Launch `go test` in project's root, this will run both the standard and the fuzzing (edge-case) tests.
+
+To run individual fuzzing tests, launch `go test -fuzz Main`.
 
 ---
 

@@ -6,9 +6,5 @@ import (
 )
 
 func RpStructureVerifier(rpObject rp_core.RolePolicy) bool {
-	if (reflect.TypeOf(rpObject) == reflect.TypeOf(rp_core.RolePolicy{})) {
-		return true
-	}
-
-	return false
+	return reflect.TypeOf(rpObject) == reflect.TypeOf(rp_core.RolePolicy{})
 }
